@@ -1,5 +1,5 @@
 {% set name = "skytag" %}
-{% set version = "0.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: bd18ddd9647203de0f45167bb926baa5553215d76003521de61ca08c2c4e2686
+  sha256: c34ba365ddfc79fdeb3d15ba4b72f7653fa017014832e7d63524a0b0127758a3
 
 build:
   noarch: python
@@ -24,6 +24,10 @@ requirements:
     - python >=3.9
     - pyyaml
     - fundamentals
+    - astropy
+    - astropy-healpix
+    - numpy
+    - pandas
 
 test:
   imports:
