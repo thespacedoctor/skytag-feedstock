@@ -1,20 +1,20 @@
 {% set name = "skytag" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: c34ba365ddfc79fdeb3d15ba4b72f7653fa017014832e7d63524a0b0127758a3
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ccfee5790654c7819fd7f57173941822a2ea10ac84a3add30291f52a6e5b2793
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - "skytag = skytag.cl_utils:main"
+    - skytag = skytag.cl_utils:main
 
 requirements:
   host:
@@ -38,7 +38,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL3
   license_file: LICENSE
-  summary: "Annotate transient sources or galaxies with the percentage credibility region they reside within on a given HealPix sky map."
+  summary: Annotate transient sources or galaxies with the percentage credibility region they reside within on a given HealPix sky map.
   doc_url: https://skytag.readthedocs.io/en/main/
   dev_url: https://github.com/thespacedoctor/skytag
 
