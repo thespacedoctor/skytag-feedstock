@@ -1,5 +1,5 @@
 {% set name = "skytag" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c216eed456082e0271f71a9fa6c0b194d0507b580f002bf0ffcc799931e6eac4
+  sha256: c8716c5821f547151562d4cda44cf697c46d25d37b5dd78a79783141b20c1e62
 
 build:
   noarch: python
