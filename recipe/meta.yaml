@@ -1,14 +1,14 @@
 {% set name = "skytag" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c8716c5821f547151562d4cda44cf697c46d25d37b5dd78a79783141b20c1e62
-
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/skytag-{{ version }}.tar.gz
+  sha256: 1a0a4d9762f4e7c88f330d7cdd3f846ed0d2266adf13dff9bae90813d1a83ebd
+  
 build:
   noarch: python
   number: 0
@@ -20,6 +20,8 @@ requirements:
   host:
     - pip
     - python >=3.9
+    - wheel
+    - setuptools
   run:
     - python >=3.9
     - pyyaml
